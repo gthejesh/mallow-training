@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration Page
+        </title>
+        <style>
+            .container{
+                justify-items: center;
+            }
+            .title{
+                font-size: 30px;
+            }
+            .register{
+                border: solid;
+                border-radius: 10px;
+                width: 50%;
+                padding: 20px;
+                background-color: aliceblue;
+                justify-self: center;
+                justify-content: center;
+            }
+
+            .register label{
+                margin: 20px;
+                margin-bottom: 8px;
+            }
+
+            .register input{
+                border-style: ridge;
+                border-radius: 7px;
+                height: 30px;
+                width: 88%;
+                box-sizing: content-box;
+                justify-self: center;
+                margin: 20px;
+                margin-top: 8px;
+                margin-right: 20px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="title">Register</h3>
+            <form action="success.html" class="register">
+                <label for="name">Name</label><br>
+                <input id="name" name="name" autofocus required><br>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" required><br>
+                <label for="username">User Name</label><br>
+                <input type="text" name="username" id="username" required><br>
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" minlength="8" required><br>
+                <label for="cnf-password">Confirm Password</label><br>
+                <input type="password" name="cnf-password" id="cnf-password" minlength="8" required><br>
+                <input type="submit" name="submit" id="submit">
+            </form>
+        </div>
+    </body>
+</html>
