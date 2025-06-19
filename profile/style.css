@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(./assets/mountain.jpg);
+
+}
+
+.intro::before{
+    content: "";
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.intro .profile{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    top: 5%;
+    left: 5%;
+    position: absolute;
+}
+
+.intro .name{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 5em;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.intro .designation{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    font-size: 3em;
+    color: #c7c7c7;
+    text-transform: capitalize;
+}
+
+.basic-info{
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(3, 130, 193);
+}
+
+.basic-info h3{
+    margin-left: 4%;
+    text-transform: uppercase;
+    color: white;
+    font-size: 2em;
+    opacity: 0.8;
+}
+
+.basic-info .infos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.basic-info .infos .info{
+    border: hidden;
+    border-left: solid;
+    border-color: rgba(255, 255, 255, 0.8);
+    width: 30%;
+    margin: 7px;
+    margin-bottom: 20px;
+}
+
+.basic-info .infos .info h5{
+    text-transform: uppercase;
+    color: white;
+    opacity: 0.8;
+    margin: 10px;
+    margin-top: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.basic-info .infos .info p{
+    color: white;
+    text-transform: capitalize;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.about-me, .quote{
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(2, 141, 210);
+}
+
+.about-me h3{
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 7px;
+    padding-left: 20px;
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    border: hidden;
+    border-left: white solid;
+}
+
+.about-me p{
+    color: white;
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.quote{
+    display: flex;
+}
+
+.quote .quote-symb{
+    margin: 0;
+    margin-left: 7px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 4em;
+}
+
+.quote .quote-text{
+    margin: 12px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+}
