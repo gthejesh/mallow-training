@@ -5,9 +5,10 @@ body{
 
 .intro{
     width: 100%;
-    height: 100vh;
+    height: 600px;
     position: relative;
     background-image: url(./assets/mountain.jpg);
+    background-repeat: no-repeat;
 
 }
 
@@ -16,6 +17,7 @@ body{
     background-color: black;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -29,14 +31,14 @@ body{
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    top: 5%;
+    top: 50px;
     left: 5%;
     position: absolute;
 }
 
 .intro .name{
     position: absolute;
-    top: 50%;
+    top: 350px;
     left: 5%;
     font-size: 4em;
     color: #fff;
@@ -45,7 +47,7 @@ body{
 
 .intro .designation{
     position: absolute;
-    top: 65%;
+    top: 450px;
     left: 5%;
     font-size: 3em;
     color: #c7c7c7;
