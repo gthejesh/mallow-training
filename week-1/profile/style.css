@@ -1,18 +1,19 @@
-body{
+body {
     margin: 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
-.intro{
+.intro {
     width: 100%;
-    height: 600px;
+    height: 360px;
     position: relative;
     background-image: url(./assets/mountain.jpg);
     background-repeat: no-repeat;
 
 }
 
-.intro::before{
+.intro::before {
     content: "";
     background-color: black;
     background-size: cover;
@@ -28,17 +29,17 @@ body{
 }
 
 .intro .profile{
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     border-radius: 100%;
-    top: 50px;
+    top: 70px;
     left: 5%;
     position: absolute;
 }
 
 .intro .name{
     position: absolute;
-    top: 350px;
+    top: 137px;
     left: 5%;
     font-size: 4em;
     color: #fff;
@@ -47,25 +48,26 @@ body{
 
 .intro .designation{
     position: absolute;
-    top: 450px;
+    top: 240px;
     left: 5%;
-    font-size: 3em;
-    color: #c7c7c7;
+    font-size: 1.7em;
+    color: #bbbdc0;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
 .basic-info{
     margin: 0;
     padding: 10px;
-    background-color: rgb(3, 130, 193);
+    background-color: rgba(6,116,190,255);
 }
 
 .basic-info h3{
-    margin-left: 4%;
+    margin-top: 7px;
+    margin-left: 5px;
+    font-size: 1.3em;
     text-transform: uppercase;
-    color: white;
-    font-size: 2em;
-    opacity: 0.8;
+    color: rgba(100,168,213,255);
 }
 
 .basic-info .infos{
@@ -76,54 +78,60 @@ body{
 .basic-info .infos .info{
     border: hidden;
     border-left: solid;
-    border-color: rgba(255, 255, 255, 0.8);
-    width: 30%;
+    border-width: 3.5px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    padding-top: 0;
+    border-color: rgba(56,144,202,255);
+    min-width: 29%;
     margin: 7px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    font-size: 0.8em;
 }
 
 .basic-info .infos .info h5{
     text-transform: uppercase;
-    color: white;
-    opacity: 0.8;
+    color: rgba(155,199,228,255);
     margin: 10px;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
-    font-size: 1.2em;
+    /* font-size: 1em; */
 }
 
 .basic-info .infos .info p{
     color: white;
     text-transform: capitalize;
     margin: 10px;
+    margin-top: 2px;
     margin-bottom: 0;
     padding: 0;
-    font-size: 1.1em;
+    /* font-size: 1em; */
 }
 
 .about-me, .quote{
     margin: 0;
     padding: 10px;
-    background-color: rgb(2, 141, 210);
+    background-color: rgba(6,126,203,255);
 }
 
 .about-me h3{
     margin: 0;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 45px;
     margin-left: 7px;
-    padding-left: 20px;
+    padding-left: 15px;
     color: white;
-    font-size: 2em;
+    font-size: 1.65em;
     text-transform: uppercase;
     border: hidden;
-    border-left: white solid;
+    border-left: #51a4da solid;
 }
 
 .about-me p{
-    color: white;
+    color: #c0def2;
     margin: 10px;
-    margin-top: 20px;
-    font-size: 1.1em;
+    font-weight: 400;
 }
 
 .quote{
@@ -133,14 +141,18 @@ body{
 .quote .quote-symb{
     margin: 0;
     margin-left: 7px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 4em;
+    margin-top: 7px;
+    color: #6ab1e0;
+    font-size: 4.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
 }
 
 .quote .quote-text{
     margin: 12px;
     margin-left: 15px;
-    font-weight: bold;
+    margin-bottom: 50px;
+    font-weight: bolder;
+    font-size: 180%;
     color: white;
-    font-size: 1.5em;
 }
