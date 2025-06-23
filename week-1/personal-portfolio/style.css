@@ -503,6 +503,7 @@ body {
 .get-in-touch .form-container form textarea {
     height: 120px;
     padding-top: 10px;
+    resize: none;
 }
 
 .get-in-touch input[type='submit'] {
