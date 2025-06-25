@@ -711,6 +711,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 350px;
 }
 
 .get-in-touch .form-container form label {
