@@ -672,7 +672,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5% 15% 5%;
+    padding: 10%;
 }
 
 .get-in-touch .heading {
@@ -726,7 +726,7 @@ body {
     border-radius: 4px;
     padding: 0 12px 0;
     height: 40px;
-    width: 350px;
+    max-width: 350px;
     font-family: IBM Plex Mono;
     margin: 10px 0 20px;
     box-sizing: border-box;
@@ -744,7 +744,7 @@ body {
     border-radius: 4px;
     padding: 16px 24px 16px;
     height: 50px;
-    width: 350px;
+    max-width: 350px;
     text-transform: capitalize;
     font-family: IBM Plex Mono;
     color: white;
