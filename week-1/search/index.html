@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Search Something
+    </title>
+    <style>
+        #logo {
+            color: rgb(0, 104, 195);
+            text-align: center;
+            margin-top: 130px;
+            margin-bottom: 10px;
+            font-size: 150px;
+        }
+
+        #search {
+            text-align: center;
+        }
+
+        #search input[type=submit] {
+            margin-top: 15px;
+            border: solid rgb(0, 32, 16) 1px;
+            border-radius: 15px;
+            font-size: 20px;
+            padding: 7px;
+            background-color: rgb(214, 236, 255);
+        }
+
+        #q {
+            border: solid rgb(0, 32, 16);
+            border-radius: 25px;
+            width: 75%;
+            height: 40px;
+        }
+
+        .recent {
+            display: none;
+            border: solid;
+            border-radius: 25px;
+            width: 75%;
+            margin-top: 50px;
+            justify-self: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="logo">Search</h2>
+    <form action="" id="search" target="_blank">
+        <input type="search" id="q" name="q" required autofocus><br>
+        <input type="submit" onclick="search('google');" value="Google">
+        <input type="submit" onclick="search('bing');" value="Bing">
+        <input type="submit" onclick="search('yahoo');" value="Yahoo">
+    </form>
+
+    <!-- <div class="recent-container"> -->
+        <div class="recent" id="recent">
+            <ul id="recent-list">
+            </ul>
+        </div>
+    <!-- </div> -->
+
+    <script>
+        function search(engine){
+            let url;
+            switch(engine){
+                case 'google':
+                    url = 'https://www.google.com/search';
+                    break;
+                case 'bing':
+                    url = 'https://www.bing.com/search';
+                    break;
+                case 'yahoo':
+                    url = 'https://in.search.yahoo.com/search';
+                    break;
+                default:
+                    url = 'https://www.google.com/search';
+            }
+            document.getElementById('search').action = url;
+            addRecent();
+        }
+
+        function addRecent(){
+            document.getElementById('recent').style.display = 'block';
+            let query = document.getElementById('q').value;
+            let li = document.createElement('li');
+            li.textContent = query;
+            document.getElementById('recent-list').appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
