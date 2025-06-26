@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    /* height: max-content; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 25%;
+    }
+}
+
+.container .output-display {
+    background-color: black;
+    height: 30vh;
+    flex: 0 0 30vh;
+}
+
+.container .buttons {
+    display: flex;
+    /* min-height: min-content; */
+    /* max-height: 70vh; */
+    height: 70vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container .buttons button {
+    /* flex: 0 0 25%; */
+    /* aspect-ratio: 1 / 1; */
+    width: 25%;
+    color: #2e2e2e;
+    background-color: #cfd0d2;
+    font-size: 2rem;
+    font-weight: 100;
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+/* @media (min-width: 1200px) {
+    .container .buttons button {
+        max-width: 90px;
+    }
+} */
+
+.container .buttons button.orange {
+    background-color: #f57a12;
+    color: white;
+}
+
+.container .buttons button.two-col {
+    /* flex: 0 0 50%; */
+    /* aspect-ratio: 2 / 1; */
+    width: 50%;
+}
