@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thejesh Bhagavanth</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            justify-self: center;
+            width: 70vh;
+            height: 50vh;
+            background-color: rgba(236, 255, 221, 0.179);
+            border-style: groove;
+            padding: 15px;
+            position: relative;
+        }
+        .card .name{
+            margin: 10px;
+            font-size: 2.2em;
+            color: rgb(188, 156, 0);
+            width: fit-content;
+        }
+
+        .card .email{
+            margin: 15px;
+            font-size: 1.3em;
+        }
+
+        .card .email a{
+            text-decoration: none;
+            color: rgba(206, 172, 2, 0.804);
+        }
+
+        .card .phone{
+            margin: 15px;
+            font-size: 1.3em;  
+        }
+
+        .card .phone a{
+            text-decoration: none;
+            color: rgba(206, 172, 2, 0.804);
+        }
+
+        .card .profile{
+            width: 20%;
+            margin: 0;
+            top: 10px;
+            right: 15px;
+            position: absolute;
+            border: solid 2px;
+            border-radius: 6px;
+        }
+
+        .card .bio{
+            color: rgb(108, 90, 0);;
+            max-width: 45%;
+            font-size: 1.1em;
+            margin: 15px;
+            margin-top: 25px;
+            font-style: italic;
+            text-align: justify;
+        }
+
+        .card .skills{
+            position: absolute;
+            /* background-color: aqua; */
+            width: 45%;
+            top: 41%;;
+            right: 10px;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .card .skills h4{
+            position: relative;
+            border: solid 1px rgb(255, 0, 0);
+            background-color: rgba(209, 255, 24, 0.142);
+            border-radius: 25px;
+            padding: 10px;
+            width: fit-content;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3 class="name">Thejesh Bhagavanth G</h3>
+        <h5 class="email"><a href="mailto:thejeshbhagavanth@gmail.com">thejeshbhagavanth@gmail.com</a></h5>
+        <h5 class="phone"><a href="callto:+919626609830">+91 9626609830</a></h5>
+        <img class="profile" src="./thejesh.png" alt="profile">
+        <p class="bio">
+            &nbsp;&nbsp;&nbsp;&nbsp;I'm a <b>Software Developer</b> proficient in programming languages
+              <b>C, Java, Python</b> and web development frameworks 
+              <b>Django and Laravel</b> with knowledge of <b>HTML, CSS, 
+                JavaScript and PHP</b>. I also have hands-on experience on <b>API 
+             Development in Laravel</b>.
+        </p>
+        <a href="https://gthejesh.github.io/portfolio#skills" target="_blank">
+            <div class="skills">
+                <h4>C</h4>
+                <h4>Java</h4>
+                <h4>Python</h4>
+                <h4>Django</h4>
+                <h4>Laravel</h4>
+                <h4>HTML</h4>
+                <h4>CSS</h4>
+                <h4>JS</h4>
+                <h4>PHP</h4>
+                <h4>API development</h4>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
