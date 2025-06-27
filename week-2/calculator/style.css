@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: max-content;
+    max-width: 400px;
+    height: 100%;
+    margin: auto;
+}
+
+/* @media (max-width: 1200px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 70%;
+    }
+}*/
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+} 
+
+.container .output-display {
+    background-color: black;
+    /* flex: 0 0 30vh; */
+    flex-direction: row-reverse;
+    max-height: 35vh;
+    display: flex;
+}
+
+.container .output-display h6 {
+    color: white;
+    font-weight: 100;
+    font-size: 4.2rem;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+
+.container .buttons {
+    display: flex;
+    /* height: 70vh; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.container .buttons button {
+    flex: 0 1 25%;
+    aspect-ratio: 1 / 1;
+    height: min-content;
+    max-height: 100px;
+    color: #2e2e2e;
+    background-color: #cfd0d2;
+    font-size: 2rem;
+    font-weight: 100;
+    border-radius: 0;
+    border: 1px solid black;
+}
+
+.container .buttons button.orange {
+    background-color: #f57a12;
+    color: white;
+}
+
+.container .buttons button.two-col {
+    flex: 0 1 50%;
+    aspect-ratio: 2 / 1;
+}
