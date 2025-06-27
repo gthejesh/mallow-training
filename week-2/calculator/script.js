@@ -16,18 +16,23 @@ btns.forEach(btn => {
     });
 
     if(btn.textContent === 'C') {
-        btn.addEventListener('mousedown', () => {
+        let holdTimer;
+
+        const startPress = (e) => {
             holdTimer = setTimeout(() => {
                 out.textContent = "";
             }, 500);
-        });
+        };
 
-        btn.addEventListener('mouseup', () => {
+        const cancelTimer = () => {
             clearTimeout(holdTimer);
-        });
+        };
 
-        btn.addEventListener('mouseleave', () => {
-            clearTimeout(holdTimer);
-        })
+        btn.addEventListener('mousedown',startPress);
+        btn.addEventListener('mouseup',cancelTimer);
+        btn.addEventListener('mouseleave',cancelTimer);
+        btn.addEventListener('touchstart', startPress);
+        btn.addEventListener('touchend', cancelTimer);
+        btn.addEventListener('touchcancel', cancelTimer);
     }
 });
