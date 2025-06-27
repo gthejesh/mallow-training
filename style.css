@@ -44,8 +44,10 @@ html, body {
     background-color: black;
     /* flex: 0 0 30vh; */
     flex-direction: row-reverse;
-    max-height: 35vh;
+    /* max-height: 35vh; */
     display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .container .output-display h6 {
@@ -78,9 +80,22 @@ html, body {
     border: 1px solid black;
 }
 
+.container .buttons button:hover {
+    cursor: pointer;
+    background-color: #eceded;
+}
+
+.container .buttons button:active {
+    scale: 0.9;
+}
+
 .container .buttons button.orange {
     background-color: #f57a12;
     color: white;
+}
+
+.container .buttons button.orange:hover {
+    background-color: #fd8a17;
 }
 
 .container .buttons button.two-col {
