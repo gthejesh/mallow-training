@@ -1,16 +1,16 @@
 const btns = document.querySelectorAll(".buttons button");
-let out = document.querySelector(".output-display h6");
+let out = document.querySelector(".output-display textarea");
 btns.forEach(btn => {
     btn.addEventListener('click', function() {
         if(btn.textContent === 'C'){
-            out.textContent = out.textContent.slice(0, -1);
+            out.value = out.value.slice(0, -1);
         } 
         else if (btn.textContent === '=') {
-            out.textContent = out.textContent.replaceAll('×', '*');
-            out.textContent = eval(out.textContent);
+            out.value = out.value.replaceAll('×', '*');
+            out.value = eval(out.value);
         }
         else{
-            out.textContent += btn.textContent;
+            out.value += btn.textContent;
         }
         
     });
@@ -20,7 +20,7 @@ btns.forEach(btn => {
 
         const startPress = (e) => {
             holdTimer = setTimeout(() => {
-                out.textContent = "";
+                out.value = "";
             }, 500);
         };
 
