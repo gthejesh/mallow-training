@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chess Board</title>
+</head>
+
+<body>
+    <table class="board" id="board">
+    </table>
+    <script>
+        let board = document.getElementById('board');
+        let elements = ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'];
+        for (let i = 0; i < 8; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < 8; j++) {
+                let box = document.createElement('td');
+                box.classList.add('box');
+                if ((i + j) % 2 == 0) box.classList.add('white');
+                else box.classList.add('black');
+                if (i == 0) { 
+                    box.textContent = elements[j]; 
+                    box.classList.add('coin-black');
+                }
+                else if (i == 1) {
+                    box.textContent = '♟';
+                    box.classList.add('coin-black');
+                }
+                else if (i==6) {
+                    box.textContent = '♟';
+                    box.classList.add('coin-white');
+                }
+                else if (i == 7) {
+                    box.textContent = elements[i - j];
+                    box.classList.add('coin-white');
+                }
+                tr.appendChild(box);
+            }
+            board.appendChild(tr);
+        }        
+    </script>
+</body>
+
+</html>
