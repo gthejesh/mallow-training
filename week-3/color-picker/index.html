@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Color Picker</title>
+</head>
+
+<body>
+    <h5>Color Picker</h5>
+    <div class="container">
+        <form action="" class="left">
+            <label for="text">Text</label>
+            <div class="input-wrapper">
+                <input type="text" name="text" id="text">
+            </div>
+            <br>
+            <label for="text-color">Text Color</label>
+            <div class="input-wrapper color">
+                <input type="text" name="text-color" id="text-color">
+                <input type="color" id="text-color-preview" class="text color-preview" value="#ffffff">
+            </div>
+            <br>
+            <label for="back-color">Background Color</label>
+            <div class="input-wrapper color">
+                <input type="text" name="back-color" id="back-color">
+                <input type="color" id="back-color-preview" class="back color-preview" value="#ffffff">
+            </div>
+            <br>
+        </form>
+        <div class="right">
+            <h6>Preview</h6>
+            <div class="preview-background">
+                <h6 class="preview-text"></h6>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let txt = document.getElementById('text');
+        txt.addEventListener('input', () => {
+            document.querySelector('.preview-text').innerHTML = txt.value;
+        });
+
+        let color = document.getElementById('text-color');
+        color.addEventListener('input', () => {
+            console.log(color.value);
+            document.querySelector('.preview-text').style.color = '#' + color.value;
+            document.querySelector('.text.color-preview').value = '#' + color.value;
+        });
+
+        let colorSelected = document.getElementById('text-color-preview');
+        colorSelected.addEventListener('input', () => {
+            console.log(colorSelected.value);
+            document.querySelector('#text-color').value = (colorSelected.value).slice(1).toUpperCase();
+            document.querySelector('.preview-text').style.color = colorSelected.value;
+        });
+
+        let backColor = document.getElementById('back-color');
+        backColor.addEventListener('input', () => {
+            console.log(backColor.value);
+            document.querySelector('.preview-background').style.backgroundColor = '#' + backColor.value;
+            document.querySelector('.back.color-preview').value = '#' + backColor.value;
+        });
+
+        let backColorSelected = document.getElementById('back-color-preview');
+        backColorSelected.addEventListener('input', () => {
+            console.log(backColorSelected.value);
+            document.querySelector('#back-color').value = (backColorSelected.value).slice(1).toUpperCase();
+            document.querySelector('.preview-background').style.backgroundColor = backColorSelected.value;
+        });
+    </script>
+
+</body>
+
+</html>
