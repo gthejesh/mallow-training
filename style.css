@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#welcome-text {
+    color: rgb(0, 204, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+}
+
+#birthday-wishes {
+    color: rgb(0, 204, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+}
+
+#message-text {
+    color: rgb(104, 220, 104);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+input {
+    border-radius: 10px;
+    height: 35px;
+    width: 400px;
+}
+
+textarea {
+    resize: none;
+    border-radius: 10px;
+}
+
+#copy-button {
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    justify-self: center;
+    align-self: center;
+    background-color: rgb(200, 255, 200);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#open-form {
+    border-radius: 20px;
+    width: max-content;
+    padding: 10px 24px;
+    justify-self: center;
+    align-self: center;
+    background-color: rgb(200, 255, 200);
+    font-weight: 600;
+    cursor: pointer;
+}
