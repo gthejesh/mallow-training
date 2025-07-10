@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+    <h1 id="welcome-text" class="hidden"></h1>
+    <h2 id="birthday-wishes" class="hidden"></h2>
+    <p id="message-text" class="hidden"></p>
+    <form class="hidden">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" placeholder="Name"><br>
+        <label for="dob">DOB</label><br>
+        <input type="date" id="dob"><br>
+        <label for="message">Message</label><br>
+        <textarea name="message" id="message" rows="4"></textarea>
+        <br>
+        <button id="copy-button">Copy Link</button>
+    </form><br>
+
+    <button id="open-form" class="hidden">Wish someone</button>
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        let data = atob(params.get("data"));
+        params = new URLSearchParams(data);
+
+        let name = params.get("name") ?? "Stranger";
+        let dob = new Date(params.get("dob"));
+        let message = params.get("message") ?? "";
+        let title = document.querySelector('title').textContent = "Welcome " + name;
+        if (dob.getMonth() == new Date().getMonth() && dob.getDate() == new Date().getDate()) {
+            let bw = document.getElementById("birthday-wishes");
+            bw.classList.remove("hidden");
+            bw.textContent = `Happy Birthday ${name}`;
+            let msg = document.getElementById("message-text");
+            msg.classList.remove("hidden");
+            msg.textContent= message;
+        }
+        else {
+            let wlcme = document.getElementById("welcome-text");
+            wlcme.textContent = "Welcome " + name;
+            wlcme.classList.remove("hidden");
+        }
+
+        let form = document.querySelector("form");
+        form.onsubmit = e => e.preventDefault()
+
+        let wishSomeoneBtn = document.getElementById("open-form");
+        wishSomeoneBtn.addEventListener('click', function () {
+            form.classList.remove("hidden");
+            this.classList.add("hidden");
+        });
+        setTimeout(() => {
+            wishSomeoneBtn.classList.remove("hidden");
+        }, 5000);
+
+        form.addEventListener('input', generateLink);
+        let link = "";
+
+        function generateLink() {
+            let name = document.getElementById("name");
+            let dob = document.getElementById("dob");
+            let message = document.getElementById("message");
+            const baseUrl = window.location.origin + window.location.pathname;
+            let encoded = btoa("name=" + name.value + "&dob=" + dob.value + "&message=" + message.value);
+            link = `${baseUrl}?data=${encoded}`;
+        }
+
+        document.getElementById("copy-button").addEventListener('click', () => {
+            navigator.clipboard.writeText(link)
+                .then(() => {
+                    alert("Link copied to clipboard. Now you can share this link.");
+                })
+                .catch(() => {
+                    alert("Failed to copy.");
+                });
+        });
+    </script>
+</body>
+
+</html>
