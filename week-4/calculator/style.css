@@ -1,0 +1,92 @@
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+.container {
+    
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    /* width: min-content; */
+}
+
+.output-display {
+    background-color: black;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.output-display textarea {
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 1;
+    resize: none;
+    text-align: right;
+    padding: 5px 18px;
+    box-sizing: border-box;
+    overflow: auto;
+    border: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.output-display textarea:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly;
+    align-content: space-evenly;
+    gap: 5px;
+    background-color: black; */
+}
+
+.buttons button {
+    flex: 0 0 25%;
+    aspect-ratio: 1 / 1;
+    color: #2e2e2e;
+    background-color: #cfd0d2;
+    font-size: 2rem;
+    padding: 0;
+    font-weight: 100;
+    /* border-radius: 50px; */
+    border: 1px solid black;
+    user-select: none;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color: #eceded;
+}
+
+.buttons button:active {
+    scale: 0.9;
+}
+
+.buttons button.orange {
+    background-color: #f57a12;
+    color: white;
+}
+
+.buttons button.orange:hover {
+    background-color: #fd8a17;
+}
+
+.container .buttons button.two-col {
+    flex: 0 1 50%;
+    aspect-ratio: 2 / 1;
+}
