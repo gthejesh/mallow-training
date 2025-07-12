@@ -69,7 +69,7 @@ btns.forEach(btn => {
     let txt = btn.textContent;
     btn.addEventListener('click', function () {
         if(clearOnType) {
-            if (txt >= '0' && txt <= '9') out.value = '';
+            if (txt >= '0' && txt <= '9' || txt == 'C') out.value = '';
             clearOnType = false;
         }
         let outVal = out.value, outLen = outVal.length;
@@ -78,12 +78,11 @@ btns.forEach(btn => {
         }
         else if (txt === '=') {
             out.value = outVal.replaceAll('×', '*');
-
             let postfixValue = postfix(out.value);
             console.log(postfixValue);
-
-            out.value = evaluate(postfixValue);
-            clearOnType = true;
+            let result = evaluate(postfixValue);
+            out.value = result ? result : "Syntax Error";
+            if(result != outVal) clearOnType = true;
         }
         else if (txt == '+/-') {
             let i = outLen - 1;
@@ -112,11 +111,10 @@ btns.forEach(btn => {
 
         }
         else if (("+×/%").includes(txt)) {
-
-            if (outLen > 1 && "+-×/%".includes(outVal[outLen - 1])) {
+            if (outLen > 1 && "+-×/%".includes(outVal[outLen - 1]) && !("+-×/%".includes(outVal[outLen - 2]))) {
                 out.value = outVal.slice(0, -1) + txt;
             }
-            else if (outLen > 0)
+            else if (outLen > 0 && !("+-*/%".includes(outVal[outLen-1])))
                 out.value += txt;
         }
         else if (txt == '-' && outVal[outLen - 1] == '-') {
